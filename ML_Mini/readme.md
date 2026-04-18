@@ -1,71 +1,109 @@
-# 🎓 Student Dropout Risk Predictor
+# Student Dropout Risk Predictor
 
-## 🚀 Overview
+## Overview
 
-A machine learning-based web application that predicts student dropout risk and provides actionable recommendations to help prevent it.
+This project presents a machine learning-based web application designed to predict the likelihood of student dropout. The system leverages academic and financial indicators to estimate risk levels and provide actionable recommendations for early intervention.
 
-## 🎯 Features
+The application is deployed using Streamlit, enabling real-time interaction and prediction through a simple user interface.
 
-* 📊 Predicts dropout probability
-* 🚦 Classifies risk (Low / Medium / High)
-* 🔍 Identifies key risk factor
-* 💡 Suggests targeted intervention
+---
 
-## 🧠 Models Used
+## Objectives
+
+* Develop a predictive model for student dropout risk
+* Address class imbalance in educational datasets
+* Compare multiple models to identify the most effective approach
+* Provide interpretable outputs for decision-making
+
+---
+
+## Methodology
+
+### Models Implemented
 
 * Logistic Regression
 * Random Forest
-* Gradient Boosting (**Best Model**)
+* Gradient Boosting (selected as the final model based on performance)
 
-## ⚙️ Techniques Applied
+### Evaluation Strategy
 
-* SMOTE (handling class imbalance)
-* Hyperparameter tuning
-* Model comparison using F1-score
+Models were evaluated using the F1-score due to class imbalance, ensuring balanced consideration of precision and recall.
 
-## 💻 Tech Stack
+### Data Handling Techniques
+
+* SMOTE (Synthetic Minority Oversampling Technique) was applied to handle class imbalance
+* Hyperparameter tuning was performed to optimize model performance
+* Feature selection focused on academically and financially relevant variables
+
+---
+
+## Features Used
+
+* Age at enrollment
+* Scholarship status
+* Debt status
+* Tuition fee status
+* Academic performance (Semester 1 and Semester 2)
+
+---
+
+## System Functionality
+
+### Inputs
+
+Users provide student-related information including academic performance and financial status.
+
+### Outputs
+
+* Dropout probability (continuous value)
+* Risk classification (Low / Medium / High)
+* Key contributing factor
+* Suggested intervention strategy
+
+---
+
+## Technology Stack
 
 * Python
 * Streamlit
 * Scikit-learn
 * Pandas, NumPy
 
-## ▶️ Run Locally
+---
 
-```bash
+## Execution
+
+Install dependencies:
+
+```
 pip install -r requirements.txt
+```
+
+Run the application:
+
+```
 streamlit run app.py
 ```
 
 ---
 
-## 📊 Input Features
+## Limitations
 
-* Age
-* Scholarship status
-* Debt status
-* Tuition fees status
-* Semester performance
+* Model performance depends on dataset quality and representativeness
+* Limited feature scope (does not include behavioral or psychological factors)
+* Predictions should support, not replace, institutional decision-making
 
 ---
 
-## 📈 Output
+## Future Work
 
-* Dropout probability
-* Risk level
-* Key reason
-* Suggested action
-
----
-
-## 🌐 Future Improvements
-
-* Add behavioral & attendance features
-* Improve UI/UX
-* Deploy fully online
+* Incorporate additional features such as attendance and behavioral metrics
+* Improve model interpretability (e.g., SHAP or feature importance visualization)
+* Enhance UI/UX for better usability
+* Deploy as a scalable web service
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Angel Xavier
